@@ -62,6 +62,8 @@ position: relative;
 
 .header h1 {
     margin-bottom: 8px;
+    font-size: 36px;
+    letter-spacing: 1px;
 }
 
 .header p {
