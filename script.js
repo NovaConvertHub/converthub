@@ -13,7 +13,7 @@ let animeList = JSON.parse(localStorage.getItem("novaAnimeList")) || [
 
 const animeContainer = document.getElementById("anime-list");
 const searchInput = document.getElementById("search-input");
-
+const clearSearchButton = document.getElementById("clear-search");
 const animeNameInput = document.getElementById("anime-name");
 const animeEpisodeInput = document.getElementById("anime-episode");
 const animeStatusInput = document.getElementById("anime-status");
@@ -128,5 +128,9 @@ addButton.addEventListener("click", function() {
     animeEpisodeInput.value = "";
     animeStatusInput.value = "Watching";
 
+    displayAnime(animeList);
+});
+clearSearchButton.addEventListener("click", function() {
+    searchInput.value = "";
     displayAnime(animeList);
 });
