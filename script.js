@@ -47,6 +47,7 @@ searchInput.addEventListener("input", function() {
 const animeNameInput = document.getElementById("anime-name");
 const animeEpisodeInput = document.getElementById("anime-episode");
 const addButton = document.getElementById("add-button");
+const animeStatusInput = document.getElementById("anime-status");
 
 addButton.addEventListener("click", function() {
     const name = animeNameInput.value.trim();
