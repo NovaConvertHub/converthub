@@ -37,8 +37,8 @@ function displayAnime(animeArray) {
     <h2>${anime.title}</h2>
     <p>Episode ${anime.episode}</p>
     <p>${anime.status}</p>
-    <button class="delete-button">Delete</button>
-`;
+    <button class="edit-button">Edit</button>
+<button class="delete-button">Delete</button>
 
         animeContainer.appendChild(card);
     });
