@@ -115,3 +115,35 @@ p {
     font-weight: bold;
     cursor: pointer;
 }
+.add-anime {
+    max-width: 400px;
+    margin: 0 auto 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add-anime input {
+    padding: 14px 16px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    background-color: #1a1a1a;
+    color: white;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.add-anime input::placeholder {
+    color: #777777;
+}
+
+.add-anime button {
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #111111;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
