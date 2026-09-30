@@ -36,7 +36,15 @@ function displayAnime(animeArray) {
         card.innerHTML = `
     <h2>${anime.title}</h2>
     <p>Episode ${anime.episode}</p>
-    <p>${anime.status}</p>
+    <p class="${
+    anime.status === "Watching"
+        ? "status-watching"
+        : anime.status === "Completed"
+        ? "status-completed"
+        : anime.status === "Plan to Watch"
+        ? "status-plan"
+        : "status-dropped"
+}">${anime.status}</p>
     <button class="edit-button">Edit</button>
 <button class="delete-button">Delete</button>
 
