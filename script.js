@@ -42,6 +42,32 @@ function displayAnime(animeArray) {
 
         animeContainer.appendChild(card);
     });
+const editButton = card.querySelector(".edit-button");
+
+editButton.addEventListener("click", function() {
+    const newEpisode = prompt("Enter the new episode:", anime.episode);
+    const newStatus = prompt(
+        "Enter the new status: Watching, Completed, Plan to Watch, or Dropped",
+        anime.status
+    );
+
+    if (newEpisode === null || newStatus === null) {
+        return;
+    }
+
+    const episodeNumber = Number(newEpisode);
+
+    if (episodeNumber < 1 || newStatus.trim() === "") {
+        alert("Please enter valid information.");
+        return;
+    }
+
+    anime.episode = episodeNumber;
+    anime.status = newStatus.trim();
+
+    saveAnime();
+    displayAnime(animeList);
+});
 const deleteButton = card.querySelector(".delete-button");
 
 deleteButton.addEventListener("click", function() {
