@@ -207,3 +207,8 @@ position: relative;
 .status-dropped {
     color: #f44336;
 }
+.anime-card:hover {
+    transform: translateY(-3px);
+    border-color: #555;
+    transition: 0.2s ease;
+}
