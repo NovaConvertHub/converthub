@@ -180,3 +180,14 @@ p {
     font-weight: bold;
     color: #ffffff;
 }
+.edit-button {
+    margin-top: 12px;
+    margin-right: 8px;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #555555;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
