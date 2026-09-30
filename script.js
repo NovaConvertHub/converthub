@@ -27,7 +27,10 @@ function saveAnime() {
 
 function displayAnime(animeArray) {
     animeContainer.innerHTML = "";
-
+if (animeArray.length === 0) {
+    animeContainer.innerHTML = "<p class='empty-message'>No anime found.</p>";
+    return;
+}
     animeArray.forEach(function(anime) {
         const card = document.createElement("div");
 
