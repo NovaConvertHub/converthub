@@ -1,2 +1,2 @@
-# converthub
-All-in-one converter app
+# nova-anime-tracker
+a simple anime watch tracker
