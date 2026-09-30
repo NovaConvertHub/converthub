@@ -12,17 +12,34 @@ const animeList = [
 ];
 
 const animeContainer = document.getElementById("anime-list");
+const searchInput = document.getElementById("search-input");
 
-animeList.forEach(function(anime) {
-    const card = document.createElement("div");
+function displayAnime(animeArray) {
+    animeContainer.innerHTML = "";
 
-    card.className = "anime-card";
+    animeArray.forEach(function(anime) {
+        const card = document.createElement("div");
 
-    card.innerHTML = `
-        <h2>${anime.title}</h2>
-        <p>Episode ${anime.episode}</p>
-        <p>${anime.status}</p>
-    `;
+        card.className = "anime-card";
 
-    animeContainer.appendChild(card);
+        card.innerHTML = `
+            <h2>${anime.title}</h2>
+            <p>Episode ${anime.episode}</p>
+            <p>${anime.status}</p>
+        `;
+
+        animeContainer.appendChild(card);
+    });
+}
+
+displayAnime(animeList);
+
+searchInput.addEventListener("input", function() {
+    const searchText = searchInput.value.toLowerCase();
+
+    const filteredAnime = animeList.filter(function(anime) {
+        return anime.title.toLowerCase().includes(searchText);
+    });
+
+    displayAnime(filteredAnime);
 });
