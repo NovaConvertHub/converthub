@@ -1,3 +1,7 @@
-// Nova Anime Tracker
+const anime = {
+    title: "One Piece",
+    episode: 915,
+    status: "Watching"
+};
 
-console.log("Nova Anime Tracker is working!");
+console.log(anime);
