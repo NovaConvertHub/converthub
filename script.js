@@ -61,7 +61,7 @@ addButton.addEventListener("click", function() {
     animeList.push({
         title: name,
         episode: episode,
-        status: "Watching"
+        status: animeStatusInput.value
     });
 
     animeNameInput.value = "";
