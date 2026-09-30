@@ -42,6 +42,16 @@ function displayAnime(animeArray) {
 
         animeContainer.appendChild(card);
     });
+const deleteButton = card.querySelector(".delete-button");
+
+deleteButton.addEventListener("click", function() {
+    animeList = animeList.filter(function(item) {
+        return item !== anime;
+    });
+
+    saveAnime();
+    displayAnime(animeList);
+});
 }
 
 
