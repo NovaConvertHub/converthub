@@ -191,3 +191,18 @@ p {
     font-size: 14px;
     cursor: pointer;
 }
+.status-watching {
+    color: #4caf50;
+}
+
+.status-completed {
+    color: #2196f3;
+}
+
+.status-plan {
+    color: #ff9800;
+}
+
+.status-dropped {
+    color: #f44336;
+}
