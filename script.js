@@ -1,4 +1,4 @@
-const animeList = [
+let animeList = JSON.parse(localStorage.getItem("novaAnimeList")) || [
     {
         title: "One Piece",
         episode: 915,
@@ -13,6 +13,17 @@ const animeList = [
 
 const animeContainer = document.getElementById("anime-list");
 const searchInput = document.getElementById("search-input");
+
+const animeNameInput = document.getElementById("anime-name");
+const animeEpisodeInput = document.getElementById("anime-episode");
+const animeStatusInput = document.getElementById("anime-status");
+const addButton = document.getElementById("add-button");
+
+
+function saveAnime() {
+    localStorage.setItem("novaAnimeList", JSON.stringify(animeList));
+}
+
 
 function displayAnime(animeArray) {
     animeContainer.innerHTML = "";
@@ -32,7 +43,9 @@ function displayAnime(animeArray) {
     });
 }
 
+
 displayAnime(animeList);
+
 
 searchInput.addEventListener("input", function() {
     const searchText = searchInput.value.toLowerCase();
@@ -44,14 +57,11 @@ searchInput.addEventListener("input", function() {
     displayAnime(filteredAnime);
 });
 
-const animeNameInput = document.getElementById("anime-name");
-const animeEpisodeInput = document.getElementById("anime-episode");
-const addButton = document.getElementById("add-button");
-const animeStatusInput = document.getElementById("anime-status");
 
 addButton.addEventListener("click", function() {
     const name = animeNameInput.value.trim();
     const episode = Number(animeEpisodeInput.value);
+    const status = animeStatusInput.value;
 
     if (name === "" || episode < 1) {
         alert("Please enter an anime name and episode.");
@@ -61,11 +71,14 @@ addButton.addEventListener("click", function() {
     animeList.push({
         title: name,
         episode: episode,
-        status: animeStatusInput.value
+        status: status
     });
+
+    saveAnime();
 
     animeNameInput.value = "";
     animeEpisodeInput.value = "";
+    animeStatusInput.value = "Watching";
 
     displayAnime(animeList);
 });
