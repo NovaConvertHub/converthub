@@ -176,3 +176,7 @@ p {
     font-size: 14px;
     cursor: pointer;
 }
+.anime-card p:last-of-type {
+    font-weight: bold;
+    color: #ffffff;
+}
