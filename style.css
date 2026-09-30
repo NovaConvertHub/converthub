@@ -215,6 +215,21 @@ position: relative;
     font-size: 14px;
     cursor: pointer;
 }
+.edit-button:hover {
+    background-color: #666666;
+}
+
+.edit-button:active {
+    transform: scale(0.97);
+}
+
+.delete-button:hover {
+    background-color: #444444;
+}
+
+.delete-button:active {
+    transform: scale(0.97);
+}
 .status-watching {
     color: #4caf50;
 }
