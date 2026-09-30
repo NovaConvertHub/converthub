@@ -175,6 +175,13 @@ position: relative;
     font-weight: bold;
     cursor: pointer;
 }
+.add-anime button:hover {
+    background-color: #dddddd;
+}
+
+.add-anime button:active {
+    transform: scale(0.98);
+}
 .add-anime select {
     padding: 14px 16px;
     border: 1px solid #333;
