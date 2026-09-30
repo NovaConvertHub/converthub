@@ -5,6 +5,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 40px 20px;
+transition: background 0.3s ease;
 }
 
 h1 {
