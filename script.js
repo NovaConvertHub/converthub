@@ -1,11 +1,14 @@
-const anime = {
-    title: "One Piece",
-    episode: 915,
-    status: "Watching"
-};
+const animeList = [
+    {
+        title: "One Piece",
+        episode: 915,
+        status: "Watching"
+    },
+    {
+        title: "Naruto",
+        episode: 500,
+        status: "Completed"
+    }
+];
 
-document.getElementById("anime-title").textContent = anime.title;
-
-document.getElementById("anime-episode").textContent =
-    "Episode " + anime.episode;
-document.getElementById("anime-status").textContent = anime.status;
+console.log(animeList);
