@@ -43,3 +43,28 @@ searchInput.addEventListener("input", function() {
 
     displayAnime(filteredAnime);
 });
+
+const animeNameInput = document.getElementById("anime-name");
+const animeEpisodeInput = document.getElementById("anime-episode");
+const addButton = document.getElementById("add-button");
+
+addButton.addEventListener("click", function() {
+    const name = animeNameInput.value.trim();
+    const episode = Number(animeEpisodeInput.value);
+
+    if (name === "" || episode < 1) {
+        alert("Please enter an anime name and episode.");
+        return;
+    }
+
+    animeList.push({
+        title: name,
+        episode: episode,
+        status: "Watching"
+    });
+
+    animeNameInput.value = "";
+    animeEpisodeInput.value = "";
+
+    displayAnime(animeList);
+});
