@@ -103,7 +103,18 @@ p {
     font-size: 16px;
     outline: none;
 }
-
+.add-anime select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    background-color: #1a1a1a;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
 .add-anime button {
     width: 100%;
     padding: 14px;
