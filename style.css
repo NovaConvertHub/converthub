@@ -49,6 +49,8 @@ position: relative;
 .anime-card h2 {
     margin-top: 0;
     margin-bottom: 10px;
+    font-size: 24px;
+    letter-spacing: 0.5px;
 }
 
 .anime-card p {
