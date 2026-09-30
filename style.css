@@ -16,3 +16,20 @@ p {
     color: #aaaaaa;
     font-size: 18px;
 }
+.anime-card {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    border: 1px solid #333;
+}
+
+.anime-card h2 {
+    margin: 0 0 8px;
+}
+
+.anime-card p {
+    margin: 0;
+    color: #aaaaaa;
+}
