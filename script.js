@@ -11,4 +11,18 @@ const animeList = [
     }
 ];
 
-console.log(animeList);
+const animeContainer = document.getElementById("anime-list");
+
+animeList.forEach(function(anime) {
+    const card = document.createElement("div");
+
+    card.className = "anime-card";
+
+    card.innerHTML = `
+        <h2>${anime.title}</h2>
+        <p>Episode ${anime.episode}</p>
+        <p>${anime.status}</p>
+    `;
+
+    animeContainer.appendChild(card);
+});
