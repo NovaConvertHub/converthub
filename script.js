@@ -4,4 +4,7 @@ const anime = {
     status: "Watching"
 };
 
-console.log(anime);
+document.getElementById("anime-title").textContent = anime.title;
+
+document.getElementById("anime-episode").textContent =
+    "Episode " + anime.episode;
