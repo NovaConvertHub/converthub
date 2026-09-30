@@ -34,10 +34,11 @@ function displayAnime(animeArray) {
         card.className = "anime-card";
 
         card.innerHTML = `
-            <h2>${anime.title}</h2>
-            <p>Episode ${anime.episode}</p>
-            <p>${anime.status}</p>
-        `;
+    <h2>${anime.title}</h2>
+    <p>Episode ${anime.episode}</p>
+    <p>${anime.status}</p>
+    <button class="delete-button">Delete</button>
+`;
 
         animeContainer.appendChild(card);
     });
