@@ -66,3 +66,23 @@ p {
     color: #888888;
     margin: 0;
 }
+.search-box {
+    max-width: 400px;
+    margin: 0 auto 25px;
+}
+
+.search-box input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    background-color: #1a1a1a;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-box input::placeholder {
+    color: #777777;
+}
